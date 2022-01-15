@@ -1,12 +1,20 @@
 /* ==========use google fons=========== */
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-weight: 100%;
     font-family: 'Oxygen', sans-serif;
+    overflow-x: hidden;
+ 
 }
 
-/* ====common css============ */
+/* ========common css=========*/
 img{
     width: 100%;
     height: 100%;
@@ -26,7 +34,14 @@ li{
 
 /* ==========nav styel=========== */
 
-
+.menu-btn{
+    position: absolute;
+    top: 90px;
+    left: 35px;
+    font-size: 30px;
+    color: #333;
+    display: none;
+}
 
 nav{
     width: 100%;
@@ -62,7 +77,12 @@ nav{
 }
 /* ==========nav style end========== */
 
+
+
+
 /* ==========banner stel============ */
+
+
 .homepage{
     margin-top: 48px;
 }
@@ -89,7 +109,32 @@ nav{
     font-weight: bold;
     font-family: poppins;
     color: #333;
+    position: relative;
 }
+.banner-left h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01f387;
+    -webkit-text-stroke:0vw #383d52;
+    border-right: 2px solid #01f387;
+    overflow: hidden;
+    animation: text 6s linear infinite;
+}
+@keyframes text{
+    0%{
+        width: 0;
+    }
+    80%,90%{
+        width: 25%;
+    }
+}
+
+/* =======banner left style========= */
+
 .banner-left .btn{
     width: 180px;
     height: 40px;
@@ -109,13 +154,20 @@ nav{
 .fa-long-arrow-right:hover{
     transform: translateX(10px);
 }
-    .banner-right{
+    .banner-right img{
         height: 400px;
         margin-top: 30px;
     }
     
 
+
+
     /*========== company-icon======== */
+
+
+
+
+
     .company-icon{
         width: 100%;
         margin-top: 100px;
@@ -127,7 +179,7 @@ nav{
         justify-content: space-between;
         flex-wrap: wrap;
         width: 100%;
-        height: 80px;
+        height: 100px;
         padding: 20px 20px;
         border-top: 1px solid gainsboro;
         border-bottom: 1px solid gainsboro;
@@ -137,7 +189,16 @@ nav{
         height: 60px;
     }
 
-    /* ===========card design ======= */
+
+
+
+
+    /* ===========card design ============= */
+
+
+
+
+
     main{
         margin: 10% 0;
     }
@@ -152,9 +213,6 @@ nav{
            grid-template-columns: repeat(3 ,1fr);
            grid-gap:30px
     
-
-
-
     }
     .card{
         border-radius: 5px;
@@ -203,19 +261,27 @@ nav{
         font-size: 15px;
         
      }
+     /* =====right button design====== */
 
      .right-btn {
-         position: relative;
-         text-align: right;
-         top: 30px;
-         right: -22px;
-         color: rgb(223, 43, 103);
-         font-weight: bold;
-         cursor: pointer;
-     }
+        position: relative;
+        text-align: right;
+        top: 30px;
+        right: -22px;
+        color: rgb(223, 43, 103);
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+
 
      /* =======title-box optional========== */
+
+
+
+
      .title-box{
+         width: 100%;
          text-align: center;
          margin: 100px auto 50px;
      }
@@ -230,17 +296,20 @@ nav{
         margin-bottom: -40px;
          display: flex;
          justify-content: space-between;
+         
      }
 
      .profil-box{
          width: 240px;
-         height: 250px;
+         height: 270px;
          text-align: left;
          border-radius: 5px;
          margin-bottom: 30px;
          box-shadow: 2px 3px 20px gainsboro;
          padding: 20px;
          position: relative;
+         margin: 0 10px;
+        
          
      }
     .profil-box img{
@@ -279,7 +348,15 @@ nav{
         color: #333;
     }
 
+
+
+
     /* ===========styel footer section========== */
+
+
+
+
+
     footer{
         display: flex;
         flex-direction: column;
@@ -312,3 +389,166 @@ nav{
         
         border-radius: 100%;
     }
+
+    /* =====================
+    footer styel endss
+    =======================*/
+
+
+    /* =================================
+
+            responsive section
+    =================================== */
+
+
+
+
+
+    /* ===  fot Mobial only==== */
+
+
+  @media(max-width:768px){
+      .nav-item{
+          display: none;
+      }
+      .nav-item:last-child{
+          display: block;
+          margin-right: 20px;
+      }
+      .menu-btn{
+          display: block;
+      }
+
+      /* == logo styel=== */
+     .logo{
+        margin-left: 125px; 
+     }
+
+     /* home page style */
+     .banner{
+         width: 100%;
+         margin: 0 auto;
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+     }
+     .banner-left{
+         width: 90%;
+         margin: 0 auto;
+
+         text-align: center;
+        
+     }.banner-left h1{
+        font-size: 30px;
+        
+     }
+
+     /* ===btn styel=== */
+     .btn{
+         display: block;
+         margin: auto;
+     }
+
+     .company-icon{
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0 20px;
+     }
+          /* === carad styel==== */
+     .section-cards{
+         display: grid;
+         grid-template-columns: repeat(1 ,1fr);
+        
+         margin: 30px;
+         
+     }
+
+     .card{
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+       }
+     .right-btn{
+         margin-right: 80px;
+     }
+           /* ==== team styel ====== */
+     .team-row{
+         flex-direction: column;
+        
+         width: 100%;
+         height: auto;
+         padding: 20px;
+       
+         
+        }
+        .profil-box{
+          
+            width: 90%;
+            margin: 20px  auto;
+            
+         }
+       
+           .banner-left h1::before{
+               display: none;
+           }
+          
+       }
+            
+        /* ===== tablat style===== */
+
+
+        
+
+        @media(min-width:769px) and (max-width:1024px){
+            .banner{
+                width: 80%;
+                margin: 0 auto;
+            }
+            .logo{
+                margin-left: 10%;
+            }
+            .section-cards{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                width: 80%;
+                margin: auto;
+                
+                
+            }
+            .company-icon{
+                flex-direction: column;
+                width: 80%;
+                margin: 0 auto;
+                padding: 0 20px;
+             }
+             .right-btn{
+                margin-right: 80px;
+            }
+            .team-row{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 70px;
+               
+            }
+            .profil-box{
+                margin: 20px 0;
+                
+
+            }
+            .nav-item{
+                margin-left: 25px;
+            }
+            .nav-list{
+                display: flex;
+                flex-direction: row;
+                padding: 0 15px;
+            }
+        }
+       
+         
+        
+
+         
+     
