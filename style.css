@@ -198,7 +198,9 @@ nav{
      } .icon p{
         color: #333;
         margin: 5px 0;
-        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        font-size: 15px;
         
      }
 
@@ -211,3 +213,102 @@ nav{
          font-weight: bold;
          cursor: pointer;
      }
+
+     /* =======title-box optional========== */
+     .title-box{
+         text-align: center;
+         margin: 100px auto 50px;
+     }
+     .title-box h1{
+         font-size: 30px;
+         color: #333;
+         font-weight: 700;
+     }
+
+     .team-row{
+        margin-top: 5%;
+        margin-bottom: -40px;
+         display: flex;
+         justify-content: space-between;
+     }
+
+     .profil-box{
+         width: 240px;
+         height: 250px;
+         text-align: left;
+         border-radius: 5px;
+         margin-bottom: 30px;
+         box-shadow: 2px 3px 20px gainsboro;
+         padding: 20px;
+         position: relative;
+         
+     }
+    .profil-box img{
+        position: absolute;
+        width: 100px;
+       height: 100px;
+       top: 20px;
+       right: 20px;
+        
+        border-radius: 5px;
+    }
+    .profil-box h4{
+        font-size: 20px;
+        margin-top: 25px;
+        margin-bottom: 5px;
+        color: #333; 
+    }
+    small{
+        font-size: 17px;
+    }
+    .social-box{
+        background-color: rgb(223, 43, 103);
+        margin: 60px auto 20px;
+        text-align: center;
+        border-radius:3px ;
+    }
+    .social-box .fa{
+        margin: 5px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .profil-box  p{
+        line-height: 20px;
+        font-size: 15px;
+        font-family: lato;
+        color: #333;
+    }
+
+    /* ===========styel footer section========== */
+    footer{
+        display: flex;
+        flex-direction: column;
+        
+        background-color: #0A0826;
+        height: 250px;
+        text-align: center;
+        color: white;
+    }
+    .padding{
+    padding-top: 30px;
+    } 
+    
+    .padding h2{
+    margin: 20px 0 0 0;
+    }
+    
+    .padding p{
+    margin: 10px;
+    font-size: 13.5px;
+    }
+    .social-icon .fa{
+
+        margin-top: 10px;
+        padding: 7px 7px;
+        margin: 8px;
+        cursor: pointer;
+        text-align: center;
+        background-color: rgba(79, 80, 80, 0.3);
+        
+        border-radius: 100%;
+    }
