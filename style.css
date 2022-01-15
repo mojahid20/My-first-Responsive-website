@@ -267,7 +267,7 @@ nav{
         position: relative;
         text-align: right;
         top: 30px;
-        right: -22px;
+        right: 30px;
         color: rgb(223, 43, 103);
         font-weight: bold;
         cursor: pointer;
